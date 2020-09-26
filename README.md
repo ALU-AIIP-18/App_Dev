@@ -20,4 +20,5 @@ Web app extensions
 2. '/MSUSolar/ --> Solar Maintenance File Page
 3. '/SolarPowerPrediction' --> 4-day Solar Power Output Forecast (MW)
 4. '/WindPowerPrediction' --> 4-day Wind Power Output Forecast (MW)
-5. '/dashdisplay/' --> Dashboard
+5. '/dashdisplay/' --> Dashboard display of 4-day power forecast of solar and wind PPs
+
