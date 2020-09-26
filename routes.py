@@ -11,7 +11,7 @@ Created on Sat Sep 12 10:57:52 2020
 @author: rbisa
 """
 
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, redirect
 from predict_solar import df_solar_2
 from predict_wind import df_wind_2
 import os
@@ -67,12 +67,20 @@ def predict_wind():
     
     
 #route 5: DASH layout
-@app.server.route("/call_back_1")
-def call_back_1():
-    print("Welcome to Company Solar & Wind Power Plants Output Predictions Site")
+@app.server.route("/call_back")
+def call_back():
+    print("Re-routing to Home Page...")
     
-    return Flask.redirect("/")
+    return redirect("/")
+
+@app.server.route("/store_file")
+def store_file():
+    keep = request.files.get("filename", None)
+    if keep:
+        print(keep.stream.read())
+    
+    return redirect("/")
 
 
 if __name__ == '__main__':
-    app.run_server(port=5001, debug=True)
+    app.run_server(debug=True)
