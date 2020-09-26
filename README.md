@@ -10,7 +10,7 @@ range of historical dates used = 08/09/2020 - 12/09/2020
 1. weather_API.py and weather_API_solar.py        
 2. model_solar.py and model_wind.py
 3. predict_solar.py and predict_wind.py
-4. calc_power.py for scaling predicted solar power by solar maintenance schedule
+4. calc_power.py for scaling predicted solar power by solar maintenance schedule; solar_farm.csv was edited to reflect the 4 historical weather APIs and one date of the month to coincide with the predicted, to test this .py file. Attached edited file in repo.
 5. my_dash_code.py 
 
 6. routes.py ties them all together; ran in command prompt and starts up the web app to display everything
