@@ -28,12 +28,14 @@ def get_dash(server):
 
     Solar_Out = power_df_final['Predicted_Solar']
     Wind_Out = power_df_final['Predicted_Wind']
+    Total_Out = power_df_final['Total_Predicted_Power']
     branches = power_df_final['Day_y']          #remember to remove suffix, seen solution on stack overflow
 
-    trace1 = go.Bar(x=branches,y = Solar_Out, name = 'SOLAR PP')
-    trace2 = go.Bar(x=branches,y = Wind_Out, name = 'WIND PP')
+    res1 = go.Bar(x=branches,y = Solar_Out, name = 'SOLAR PP')
+    res2 = go.Bar(x=branches,y = Wind_Out, name = 'WIND PP')
+    res3 = go.Bar(x=branches,y = Total_Out, name = 'SOLAR + WIND PPs')
 
-    data = [trace1, trace2]
+    data = [res1, res2]
     layout = go.Layout(barmode = 'group', xaxis_title="Day Of Month", yaxis_title="Power Generated (MW)")
     fig = go.Figure(data = data, layout = layout)
 
@@ -60,6 +62,12 @@ def get_dash(server):
         dcc.Graph(
             id='example-graph-2',
             figure=fig
-        )])
+        ),
+        
+        dcc.Graph(
+            id='example-graph-3',
+            figure=go.Figure(data=[res3], layout=go.Layout(xaxis_title="Day Of Month", yaxis_title="Total Power Generated (MW)")))
+        
+        ])
 
     return app
