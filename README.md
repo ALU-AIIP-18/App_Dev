@@ -21,4 +21,4 @@ Web app extensions
 3. '/SolarPowerPrediction' --> 4-day Solar Power Output Forecast (MW)
 4. '/WindPowerPrediction' --> 4-day Wind Power Output Forecast (MW)
 5. '/dashdisplay/' --> Dashboard display of 4-day power forecast of solar and wind PPs
-
+6. 'call_back' --> re-routing to Home Page
