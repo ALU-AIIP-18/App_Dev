@@ -1,4 +1,4 @@
-# App_Dev_Summative
+# App_Dev_Summative: 4-Day Power Output (MW) Forecast
 
 This is the repository created by REBECCA MUTESI BISANGWA containing the AIIP App Dev Summative 2020. 
 
@@ -16,8 +16,8 @@ range of historical dates used = 08/09/2020 - 12/09/2020
 6. routes.py ties them all together; ran in command prompt and starts up the web app to display everything
 
 Web app extensions
-'/' --> Home Page
-'/MSUSolar/ --> Solar Maintenance File Page
-'/SolarPowerPrediction' --> 4-day Solar Power Output Forecast (MW)
-'/WindPowerPrediction' --> 4-day Wind Power Output Forecast (MW)
-'/dashdisplay/' --> Dashboard
+1. '/' --> Home Page
+2. '/MSUSolar/ --> Solar Maintenance File Page
+3. '/SolarPowerPrediction' --> 4-day Solar Power Output Forecast (MW)
+4. '/WindPowerPrediction' --> 4-day Wind Power Output Forecast (MW)
+5. '/dashdisplay/' --> Dashboard
